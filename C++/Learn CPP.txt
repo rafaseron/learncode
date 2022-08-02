@@ -1,0 +1,1007 @@
+learn cpp
+// https://www.w3schools.com/cpp/default.asp
+
+>> TIPOS DE VARIÁVEIS
+int // inteiros
+float // decimais
+char // guarda apenas 1 letra
+double // float com mais memoria
+string // guarda palavras
+bool // guarda o valor true ou false
+const // constante /*tambem pode ser incluida como biblioteca sem ocupar memória RAM por #define numVidas 10 */
+ex: int x = 5, y = 6, z = 50; // declaração de multiplas variaveis // tambem da pra "puxar" a informação multiplas vezes
+y = 'c'; // declaração de char
+
+>> COMO ATRIBUIR VALOR AS VARIAVEIS
+/*declaraveis em scanf, utilizasse a %letracorreta e posteriormente puxa a variavel para receber a informação com &var*/
+%c // char
+%d ou %i // int
+%f // float
+%lf // double
+
+// podemos declarar constantes como "const float pi = 3.14;" // #define pi 3.14 /*não ocupa memória RAM*/
+
+/*atribuidas apenas com cin e cout*/
+
+cin >> sNome1; // NO CASO DE UMA STRING, A FUNÇÃO cin FUNCIONA COMO UM scanf E ATRIBUI O VALOR AUTOMATICAMENTE
+cin >> bVar1; // no caso de uma booleana, guarda o valor de 0 (false) ou 1 (true) /*tambem guarda qualquer valor !=0 como true*/
+/*com essa informação, sabemos que é mais facil criar um if else de Booleanas de acordo com a condição ser o bVar != 0 */
+
+>> OPERADOR ARITMETICO
+++ // incremento em 1
+-- // discremento em 1
+/ 
+% // RETORNA APENAS O RESTANTE DA DIVISÃO DE INTEIROS /*numa divisão de 7 por 3, (fica tipo 6/3) e retorna 1, pois esse 1 se fosse dividido seria
+decimal*/
+* 
++ 
+- 
+
+>> OPERADORES RELACIONAIS (sintaxe simples)
+MAIOR >
+MENOR <
+MENOR OU IGUAL <=
+MAIOR OU IGUAL >=
+IGUAL ==
+DIFERENTE DE !=
+
+>> SINTAXE COMPOSTA (OPERADOR LOGICO)
+&& /* e, vezes*/
+|| /* ou, um ou outro*/
+! /* inverte o resultado*/
+
+>> SINTAXE DE ENTRADA (SCANF E CIN)
+scanf(“%c%c”, &var1, &var2); //caractere
+	fflush(stdin);// Limpa buffer do teclado /*NECESSÁRIO O USO DURANTE SCANF DE CHAR, POIS ELE É BUGADO*/
+scanf(“%d”, &var); //inteiro
+scanf(“%f”, &var); //decimal
+scanf(“%lf”, &var); //decimal (long float)
+cin >> var;
+
+>> SINTAXE DE SAIDA (PRINF E COUT)
+prinf("%d texto \n" nomedavar);
+cout << "texto: " << var;
+
+>> system("PAUSE");
+>> system("PAUSE");
+/*em muitos momentos é importante utilizar, fica a dica aqui*/
+
+>> STRING 
+/* funções de string */
+
+// string suporta firtname+lastname // 1. PROCEDIMENTO DE CONCATENAÇÃO (BASICAMENTE, CONCENTRAÇÃO)
+#include <string>
+string firstName = "John ";
+string lastName = "Doe";
+string fullName = firstName + " " + lastName; // TEM QUE ADICIONAR O ESPAÇO SE NÃO A STRING JUNTA OS DOIS SEM ESPAÇAMENTO
+string fullName = firstName.append(lastName); // operação de string que faz a mesma coisa que a função de cima
+
+// 2. COM A FUNÇÃO txt.size(), há como saber a quantidade de letras de uma string
+cout << "o tamanho do texto é de: " << txt.size(); // COUT É BASICAMENTE UM CARACTER OUTPUT
+
+// 3. FUNÇÃO DE ACESSO NA STRING cout << myString[0]; /*ACESSAR UM 
+CARACTER DA STRING, ESPECIFICANDO QUAL LETRA REFERENTE A CONTAGEM. (COMEÇA NO 0 E VAI ATÉ 0++)*/
+
+// 4. STRING TEM O cin E o cout (c input e c output) // explicando a entrada e a saida de uma string
+string firstName;
+cout << "Type your first name: ";
+cin >> firstName; // get user input from the keyboard
+cout << "Your name is: " << firstName;
+
+exemplo acima do cout
+
+// 5. A STRING cin NÃO CONSEGUE RECEBER DADOS SEPARADOS POR UM ESPAÇO. PARA CONSEGUIR, TEM QUE-SE UTILIZAR A FUNÇÃO getline()
+exemplo:
+
+string fullName;
+cout << "Type your full name: ";
+getline (cin, fullName); // com a função getline, a string consegue receber o valor total da frase /*basicamente o getline transforma a string de palavras para frases*/
+cout << "Your name is: " << fullName;
+
+6. EXTRA: DA PRA UTILIZAR STRING SEM ADICIONAR A BIBLIOTECA using namespace std;   conforme codigo abaixo:
+#include <iostream>
+#include <string>
+
+int main() {
+  std::string greeting = "Hello";
+  std::cout << greeting;
+  return 0;
+}
+
+				--> ESTRUTURA DE DECISÃO CONDICIONAL <--
+
+// IF ELSE /*lembrando que o else é opcional*/
+if (sintaxe simples ou composta){
+	/*comandos;*/
+} 
+else {
+	/*comandos;*/
+}
+
+// FUNÇÃO MATH /*tarefas matemáticas utilizando numeros, substitui por ex um if else*/
+--> deve-se incluir a biblioteca <--
+#include <cmath>
+cout << max(5, 10); // faz o printf apenas do termo de maior valor
+cout << min(5, 10); // faz o printf apenas do termo de menor valor
+
+// FUNÇÃO BOLEANA (BASICAMENTE UMA MATH QUE RECEBE VALOR TRUE OR FALSE)
+cout << (9 > 10); // retorna 0, como valor false
+cout << (10 > 9); // retorna 1, como valor true
+cout << (10 == 10); // 1
+
+// MODIFICADOR DE TIPO DE VARIÁVEL (MEMÓRIA)
+signed int iNumero; // apenas numeros com sinal (positivos e negativos)
+unsigned int iNumero; // numeros sem sinais (então apenas 0 a +infinito)
+long int iNumero; // aumenta a capacidade de memória da variável
+short int iNumero; // diminui a capacidade de memória da variável
+
+long unsigned int iNumero; // da pra mesclar long/short com signed/unsigned
+sizeof() // mostra a quantidade de bytes que a variável ocupa na memória
+/*ex cout << "tamanho do long float é de: " << sizeof(long float) */
+
+#define constante 10
+
+// OPERADOR TERNÁRIO (SHORT IF ELSE)
+variable = (condition) ? expressionTrue : expressionFalse;
+string result = (time < 18) ? "Good day." : "Good evening."; // o good day estaria dentro do if(){dentro daqui} /*o good evening estaria após o else*/
+cout << result;
+
+// SWITCH CASE // as condições são apenas valores inteiros (int) ou char (por ser uma letra "inteira")
+/*tem uma estrutura a ser seguida*/
+switch(iVar)
+case 1:
+	/*instruções*/
+	break;
+case 2:
+	/*instruções*/
+	break;			// a função break quebra o switch mas continua o codigo depois do switch
+defaut: 	// é executada quando não escolhe nenhuma dos cases
+	cout << "você tem que escolher entre 1 e 2 apenas";
+	break;
+
+// utilizando o case com letra char, fica --> 	case 'a'   case 'b'   /*instruções com aspas simples*/
+/*importante lembrar que é case sensitive em relação a letra ser maiscula e minuscula*/
+// simbolos de caracter como +-*/ também são considerados como char
+
+				--> ESTRUTURA DE REPETIÇÃO (LOOP) <--
+
+// 1. WHILE /*verifique se a condição é verdadeira. se sim, continue executando até seu ultimo momento como verdadeira*/ 
+while (condition true){
+	cout << var;	/*code*/
+	var ++;		/*code*/
+}
+
+// 2. DO WHILE /*comece e continue executando ate o ultimo momento da condição ser verdadeira*/ /*primeiro executa, depois verifica, e ai pode ou não continuar processando*/
+do{
+    /* code */
+} while (condition true);
+
+// 3. FOR /*for, igual while, primeiro verifica a condição e depois continua o processamento*/
+for (int i = 0; i < count; i++) /*declaração da var; condição; var++)*/
+{
+    /* code */
+}
+
+>> 4. EXTRA PARA LOOPS
+--> BREAK --> break; pode sair de loops:
+for (int i = 0; i < 10; i++) {
+  if (i == 4) {
+    break;
+  }
+  cout << i << "\n";
+}
+
+--> CONTINUE --> continue; pode pular uma determinada condição/irá abstrair caso a condição seja true:
+for (int i = 0; i < 10; i++) {
+  if (i == 4) {		// com esse if==4, na hora do cout, o 4 será pulado
+    continue;
+  }
+  cout << i << "\n";
+}
+
+				--> ARRAYS (VETOR) <--
+
+// 1. ARRAYS /*é declarado um tipo de variavel que pode assumir vários valores. pode ser declarado de forma simples ou composta*/
+/*seu tamanho é declarado por [tamanho] e seus dados por {dado1, dado2, ...};*/
+
+string cars[4];  /*declaração simples de array*/
+string cars[4] = {"Volvo", "BMW", "Ford", "Mazda"};  /*declaração já com valores informados*/
+int myNum[3] = {10, 20, 30};
+
+SAIDA: cout << cars[0]; /*a contagem da posição é feita por 0++ */
+
+// 2. ARRAYS and LOOPS
+/*loop de saida cout para string*/
+string cars[4] = {"Volvo", "BMW", "Ford", "Mazda"};
+for (int i = 0; i < 4; i++) {
+  cout << cars[i] << "\n";
+}
+
+// 3. OMIT ARRAY SIZE /*podemos iniciar um array sem fixar seu tamanho*/
+string cars[] = {"Volvo", "BMW", "Ford"}; // size of array is always 3
+	/*porem quando isso acontece, o seu tamanho fica sempre fixado no numero total inicial de variáveis atribuidas*/
+
+>> para adicionar espaços extras no futuro, apenas escrevento novamente todo o array
+string cars[] = {"Volvo", "BMW", "Ford"}; 		      //"antigo"
+string cars[] = {"Volvo", "BMW", "Ford", "Mazda", "Tesla"};  // "novo" com espaço extra
+
+>> é melhor abrir o Array com valores extras primeiro e depois ir utilizando os espaços no futuro
+string cars[5] = {"Volvo", "BMW", "Ford"}; // size of array is 5, even though it's only three elements inside it
+cars[3] = "Mazda";   /*adição posterior de valors ao Array*/
+cars[4] = "Tesla";   /*adição posterior de valors ao Array*/
+
+// 4. FUNÇÃO DE TAMANHO MEMÓRIA ARRAY
+int myNumbers[5] = {10, 20, 30, 40, 50};
+cout << sizeof(myNumbers);
+>> saida: 20   // significa 20 bytes de memória sendo utilizados nesse Array
+	tem como medir o tamanho apenas de um tipo de variável por sizeof(int);
+
+// 5. MULTIDIMENSIONAL ARRAYS /*essa é uma matriz de Arrays*/
+int vagasGaragem [3][2];		// significa uma matriz de [2] linhas e [4] colunas
+
+int vagasGaragem [3][2]{
+{1,1},
+{2,2},
+{3,3},
+}
+
+>> interessante utilizar dois for para acessar cada vetor dentro da matriz
+for (i=0; i<3; i++){
+	for (j=0; j<2; j++){				/*aqui na execução, por conta das chaves, é fixada a linha e começa a printar todas colunas, até trocar de linha novamente*/
+	cout << vagasGararem [i][j] << " ";
+	}
+  cout << "\n";
+}
+
+>> até ali em cima, são matrizes bidimensionais: tipoVar nomeVar [][];
+	existe também matriz tridimensional: tipoVar nomeVar [][][];   /*e infinitas dimensoes, só aumentar a quantidade de []*/
+
+>> existe a função for ech (for ranged loop): ela percorre todo o Array linear, até mostrar todos seus elementos /*é meio que um auxilio do sistema pra
+																			não precisar declarar a variavei i ou j*/
+
+    string nomes [] {"Rafael", "Rodolfo", "Rodrigo"};
+for (string passadas : nomes){
+	cout << passadas << "\n";
+}
+
+>> vetor dinâmico: este tipo de vetor permite adicionar mais elementos no meio do código
+#include <vector>
+vector <tipoVar> nomeVar;	// declaração de um vetor dinâmico
+vector <int> nomeVar =  {7, 5, 16, 8};	// declaração junto a valores
+
+nomeVar.push_back(25); /*função que adiciona valores ao vetor
+nomeVar.push_back(13);		dinâmico que já foi declarado*/
+
+// na saida, com função for ranged loop:
+	for (int passadas : nomeVar){
+		cout << passadas << " ";
+}
+// na saida imprime 7 5 16 8 25 13
+// ou seja, conseguiu receber os valores 25 e 13 mesmo depois da declaração, no meio do processamento
+
+-->		>> EXISTE STRUCTURES EM C++, FUNCIONA DE FORMA PARECIDA COM ARRAYS E MATRIZES (MAS ACEITA TODO TIPO DE DADOS MISTURADO)		<--
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+// Declare a structure named "car"
+struct car {
+  string brand;
+  string model;
+  int year;
+};
+
+int main() {
+  // Create a car structure and store it in myCar1;
+  car myCar1;
+  myCar1.brand = "BMW";
+  myCar1.model = "X5";
+  myCar1.year = 1999;
+
+  // Create another car structure and store it in myCar2;
+  car myCar2;
+  myCar2.brand = "Ford";
+  myCar2.model = "Mustang";
+  myCar2.year = 1969;
+ 
+  // Print the structure members
+  cout << myCar1.brand << " " << myCar1.model << " " << myCar1.year << "\n";
+  cout << myCar2.brand << " " << myCar2.model << " " << myCar2.year << "\n";
+
+				--> REFERENCES <--
+string food = "Pizza";
+string &meal = food;  //diz que carne tem referencia a pizza
+
+cout << food << "\n";  // Outputs Pizza
+cout << meal << "\n";  // Outputs Pizza
+
+>> acesso na memória:
+string food = "Pizza";
+cout << &food; // Outputs 0x6dfed4	/*tem como utilizar o & para puxar a localização do proprio item na memoria RAM*/
+
+				--> PONTEIROS <--
+
+// 1. CREATE POINTERS
+em referencias, vimos como o operador & pode acessar o endereço de mmemoria da variável
+ponteiro: é uma variável que armazena o endereço de memória como seu valor
+
+string food = "Pizza";  // A food variable of type string
+string* ptr = &food;    // A pointer variable, with the name ptr, that stores the address of food, CONFORME APONTADO PELO ASTERISTICO * (operador de ponteiro)
+
+cout << food << "\n";  // Output the value of food (Pizza)
+
+cout << &food << "\n"; // Output the memory address of food (0x6dfed4)				/*ou seja, um ponteiro funciona da mesma maneira que
+cout << ptr << "\n";  // Output the memory address of food with the pointer (0x6dfed4)		uma referencia, mas como uma variavel de ponteiro*/
+
+// 2. DEREFERENCING  /*serve para, ao inves de dar cout do valor de memória (de referencia), dar cout no valor da propria variavel, que foi linkada ao ponteiro*/
+diferente da criação de ponteiros: no processo de desreferencia, o * serve como operador de desreferenciação
+
+cout << *ptr << "\n"; // sua saida, com o operador de desreferenciação: Tem saida do valor de food com the pointer (que no caso, será Pizza)
+
+// 3. MODIFY POINTERS  /*durante o processamento, podemos mudar o valor da variavel, utilizando o metodo do ponteiro desreferenciado*/
+
+string food = "Pizza";
+string* ptr = &food;
+
+cout << food << "\n";  // Output the value of food (Pizza)
+cout << &food << "\n";  // Output the memory address of food (0x6dfed4)
+
+cout << *ptr << "\n";  // Access the memory address of food and output its value (Pizza) // ponteiro desreferenciado
+*ptr = "Hamburger";  // muda o valor da variavel, usando o ponteiro desreferenciado
+
+cout << *ptr << "\n";  // Output the new value of the pointer (Hamburger)
+cout << food << "\n";  // Output the new value of the food variable (Hamburger)
+
+				--> FUNCTIONS <--
+
+/*Uma função é um bloco de código que só é executado quando é chamado.*/
+**void significa que a função não deve retornar resultados
+Você pode passar dados, conhecidos como parâmetros, para uma função.
+As funções são usadas para executar determinadas ações e são importantes para reutilizar o código: defina o código uma vez e use-o várias vezes.
+EXTRA: a função int main(){//code} significa que os codigos que estão dentro da mesma serão executadas durante a compilação
+
+// 1. CREATE FUNCTIONS  /*cria uma função com nome myFunction para reutilizar o codigo futuramente. é declarada em cima da função int main() {} */
+
+void myFunction() {			// void significa que a função não tem um valor de retorno
+  // code to be executed
+}
+
+>> CHAMAR A FUNÇÃO: você a chamara com a sintaxe nomeFuncao();
+
+int main (){
+	myFunction();
+}
+
+>> TAMBEM PODE: declarar a função acima de int main() como void myFunction(); chamar a função por myFuncion(); dentro da função int main() e 
+escrever o codigo de execução da função apenas em baixo de toda função int main(){} 
+/*ou seja, sempre é declarada em cima de int main(). É chama sempre durante codigo int main(). Seu valor pode ser definido em cima ou em baixo
+do int main(), mas nunca durante*/
+
+// 2. FUNCTIONS PARAMETERS
+>>>>>>> PARAMETROS/ARGUMENTOS	/*parametros são variáveis dentro da função que passam informações. são adicionados entre os () da função,
+						podem ser adicionados em grande quaantidade, é só separa-los com virgulas*/
+
+SYNTAX: void functionName(parameter1, parameter2, parameter3) {
+  // code to be executed
+}
+
+exemplo de uso de parametros: 
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+void Function(string parametro1) {
+  cout << parametro1 << " Silva\n";
+}
+
+int main() {
+  Function("Rafael");  /*quando é passado um valor detro dos parenteses, esse valor substitui o valor da variavel*/
+  Function("Roberto");	/*quando há esse valor atribuido a variavel dentro de (), é chamado de ARGUMENTO*/
+  Function("Danilo");		// IMPRIMIE DANILO SILVA (parametro + texto 
+  return 0;
+}
+
+>>>>>>> PARAMETRO PADRÃO /*ao inves de usar ARGUMENTOS no meio do int main () para atribuir valor as variaveis de parametro, podemos atribuir diretamente
+				a variavel de parametro, durante sua declaração*/
+SYNTAX: void myFunction(string country = "Norway") {
+  cout << country << "\n";
+}
+>> Se chamarmos a função sem um argumento, ela usará o valor padrão ("Noruega"):
+
+>>>>>>> VARIOS PARAMETROS // sintaxe utilizando vários parametros e argumentos
+void myFunction(string fname, int age) {
+  cout << fname << " Refsnes. " << age << " years old. \n";
+}
+int main() {
+  myFunction("Liam", 3);
+  myFunction("Jenny", 14);
+  myFunction("Anja", 30);
+  return 0;
+}
+
+>>>>>>> VALORES DE RETORNO /*utilizasse a palavra return para a função retornar valor (diferente de void, que significa para não retornar nada)
+int myFunction(int x) {
+  return 5 + x;
+}
+int main() {
+  cout << myFunction(3);	// é observado que a função return retorna a expressão 5+3 e da a output de 8
+  return 0;
+}
+
+>>>>>>> PASSAR POR REFERÊNCIA	//aqui, é utilizado, ao inves de variaveis comuns, referencias, durante a definição da função
+void swapNums(int &x, int &y) {		/*aqui, foi montada uma função com uma auxiliar z, para alterar os valores entre x e y*/
+  int z = x;				/*percebe-se que é utilizado referencias, para que durante o procedimento de argumento,
+  x = y;				 as variaveis fora da função consigam ser manipuladas pela função*/
+  y = z;
+}
+
+int main() {
+  int firstNum = 10;
+  int secondNum = 20;
+
+  cout << "Before swap: " << "\n";
+  cout << firstNum << secondNum << "\n";
+
+  // Call the function, which will change the values of firstNum and secondNum
+  swapNums(firstNum, secondNum);	//aqui, as variaveis de fora da função entram na função como um argumento, passa pelas referencias e viram os parametros
+
+  cout << "After swap: " << "\n";
+  cout << firstNum << secondNum << "\n";
+
+  return 0;
+}
+
+>>>>>>> MATRIZES DE PASSAGEM	//aqui é utilizado a função para manipular os arrays
+void myFunction(int myNumbers[5]) {
+  for (int i = 0; i < 5; i++) {
+    cout << myNumbers[i] << "\n";
+  }
+}
+
+int main() {
+  int myNumbers[5] = {10, 20, 30, 40, 50};
+  myFunction(myNumbers);
+  return 0;
+}
+
+// 3. FUNCTIONS OVERLOADING 	/*você pode declarar duas funções com mesmo nome, mas com tipo de dados diferente. na hora da execução, vc puxa a função e ela, de forma
+automatica, funcionará de acordo com a função que corresponde a aquele tipo de dados*/
+
+int plusFunc(int x, int y) {
+  return x + y;
+}
+
+double plusFunc(double x, double y) {
+  return x + y;
+}
+
+int main() {
+  int myNum1 = plusFunc(8, 5);
+  double myNum2 = plusFunc(4.3, 6.26);
+  cout << "Int: " << myNum1 << "\n";
+  cout << "Double: " << myNum2;
+  return 0;
+}
+
+// 4. RECURSION  /*A recursão é a técnica de fazer uma outra função chamar a função que foi declarada. Esta técnica fornece uma maneira de quebrar problemas complicados em problemas simples que são mais fáceis de resolver.*/
+
+>> exemplo é uma função de somatoria de todos os elementos antes do mesmo. (se adicionado o numero 3, a função deve somar 3+2+1+0)
+
+int sum(int k) {
+  if (k > 0) {
+    return k + sum(k - 1);
+  } else {
+    return 0;
+  }
+}
+
+int main() {
+  int result = sum(10);
+  cout << result;
+  return 0;
+}
+
+>> PROGRAMAÇÃO ESTRUTURADA  //top to bottom
+você programa pensando primeiro no PRINCIPAL e vai indo basico
+
+ex:
+PRINCIPAL -> LER DADOS RELATORIO
+PRINCIPAL -> PROCESSAR DADOS LIDOS  -> VALIDAR DADOS -> ALTERAR FORMATO DE DADOS
+PRINCIPAL -> MOSTRAR RESULTADO NA TELA
+PRINCIPAL -> FORMATAR RELATORIO DE IMPRESSÃO
+
+
+>> PROGRAMAÇÃO ORIENTADA A OBJETOS  //bottom to top
+você programa pensando primeiro nos elementos menores e mais simples, pra depois ir estruturando e deixando o sistema mais complexo
+
+ex: num programa pensando num sistema universitário de matriculas (PRINCIPAL), se pensa primeiro nas classes menores (alunos e professores)
+
+CLASSE PROFESSOR -> SALÁRIO
+CLASSE PROFESSOR -> OBTER SALARIO () //função salário
+
+CLASSE ALUNO -> MATRICULA
+CLASSE ALUNO -> OBTER MATRICULA () //função matricula
+
+JUNTA OS ELEMENTOS PROFESSOR -> OBJETO PROFESSOR
+JUNTA OS ELEMENTOS ALUNO -> OBJETO ALUNO
+
+CONJUNTO DE OBJETOS = PRINCIPAL    // OBJETO PROFESSOR + OBJETO ALUNO = PRINCIPAL (SOFTWARE MATRICULA)
+
+>>>> OU SEJA, VOCÊ PROGRAMA PENSANDO PRIMEIRO EM DIVIDIR AS FUNÇÕES DO SOFTWARE EM CLASSES. CADA CLASSE TEM SEUS DADOS E PROCESSAMENTOS (COMPLEXIDADE PARTICULAR)
+VOCÊ ABSTRAI TODOS OS ELEMENTOS QUE NÃO TE INTERESSAM ENQUANTO VOCÊ TERMINA AQUELA CLASSSE. A TERMINANDO, VOCÊ COMEÇA A DESENVOLVEDOR A SEGUINTE CLASSE.
+QUANDO TERMINADA TODAS AS CLASSES, VOCÊ TEM ENTÃO OS OBJETOS (RESULTADOS DE CADA CLASSE). TODOS OS OBJETOS EM COMUM SE TORNANM UM SOFTWARE FUNCIONAL
+
+				--> PROGRAMAÇÃO ORIENTADA A OBJETOS <--
+é sobre a criação de objetos que contenham dados e funções.
+>> PRINCIPIO DE REUTILIZAÇÃO DE CÓDIGO -> DONT REPEAT YOURSELF (DRY)
+ Você deve extrair os códigos que são comuns para o aplicativo, e colocá-los em um único lugar e reutilizá-los em vez de repeti-los.
+
+// 1. CONCEITOS INICIAIS:
+
+> DIFERENÇAS ENTRE CLASSE E OBJETO
+
+- CLASSE: é o molde. serve de base para a criação de algo concreto, ou seja, os objetos. guia como o objeto será criado.
+// é o conjunto de variaveis e funções que vão criar um objeto
+exemplo: a classe seria o projeto (planta) de uma casa
+>> a classe informa ao compilador como será criado na memória RAM o objeto
+>> a classe é armazenada no HD
+// classe é uma coleção de variaveis e funções relacionadas agrupadas. as variaveis podem ser de qualquer outro tipo, incluindo outras classes.
+variaveis compoes os dados na classe e as funções executam tarefas usando esses dados
+** PRINCIPIO DE UMA CLASSE:  qual é o objeto que essa classe representa? qual o objetivo dessa classe?
+
+- OBJETO: é constriuido apartir da classe. o procedimento de transformar uma classe em um objeto é chamado de INSTANCIAÇÃO
+Quando os objetos individuais são criados, eles herdam todas as variáveis e funções da classe.
+>> é um espaço de memória criado com base na sua respectiva classe
+>> o objeto é armazenado na memória RAM
+>> serve para reutilizar codigo: de uma classe, você consegue criar vários objetos diferentes
+
+> ATRIBUTOS (PROPRIEDADES) E MÉTODOS (FUNÇÕES) DE UMA CLASSE  //são membros da classe
+
+- ATRIBUTOS  //variaveis //são as caracteristicas do objeto
+são as informações que precisam ser mantidas nesse objeto para que ele possa realizar todas as suas funcionalidades
+>> precisam armazenar informações, então são implementados como variáveis. e também como referÊncias a outros objetos
+
+- METODOS  //funções //comportamentos do objeto, como ele funciona.
+são as funções/métodos que vão manipular os atributos
+
+// 2. SINTAXE DE CLASSE E SINTAXE DE OBJETOS
+
+> SINTAXE DE DECLARAÇÃO DE CLASSES  /*classes são declaradas em cima do int main()*/
+
+class aviao{
+   private:
+	float Velocidade;
+	float Potencia;
+	float Largura;
+	float Comprimento;
+	float Peso;
+   public:
+	void AumentarVelocidade();
+	void DiminuirVelocidade();
+	void Decolar();
+	void Pousar();
+	void Virar na difereção(string Direcao);
+};
+
+** especificador de acesso (public): especifica que os membros (atributos e métodos) da classe estão acessíveis de fora da classe
+/*quando o programa estiver sendo executado e queremos saber qual a situação do objeto em relação ao valor de seus atributos, dizemos que
+queremos saber o ESTADO	do objeto*/
+
+> SINTAXE DE CRIAÇÃO DE OBJETOS (APÓS A CLASSE ESTIVER DECLARADA)  /*é utilizado dentro da função int main()*/
+/*o objeto consegue apontar para dentro da classse, e manipular e retirar suas informações*/
+
+>> sintaxe definição de objeto:  <NomeDaClasse> <nomeDoObjeto>;
+
+class MyClass {       // The class
+  public:             // Access specifier
+    int myNum;        // Attribute (int variable)
+    string myString;  // Attribute (string variable)
+};
+
+int main() {
+  MyClass myObj;  // Create an object of MyClass
+
+  // Access attributes and set values		/*COMO ACESSAR ATRIBUTOS				
+  myObj.myNum = 15; 					APONTANDO-OS COM O USO DOS OBJETOS*/			
+  myObj.myString = "Some text";
+
+  // Print attribute values
+  cout << myObj.myNum << "\n";
+  cout << myObj.myString;
+  return 0;
+}
+
+*** -> -> -> // VOCÊ PODE, E DEVE, CRIAR VÁRIOS OBJETOS REFERENTES A UMA MESMA CLASSE /*principio DRY (reutilização de código)*/  <- <- <- ***
+
+// Create a Car class with some attributes
+class Car {
+  public:
+    string brand;   
+    string model;
+    int year;
+};
+
+int main() {
+  // Create an object of Car
+  Car carObj1;
+  carObj1.brand = "BMW";
+  carObj1.model = "X5";
+  carObj1.year = 1999;
+
+  // Create another object of Car
+  Car carObj2;
+  carObj2.brand = "Ford";
+  carObj2.model = "Mustang";
+  carObj2.year = 1969;
+
+  // Print attribute values
+  cout << carObj1.brand << " " << carObj1.model << " " << carObj1.year << "\n";
+  cout << carObj2.brand << " " << carObj2.model << " " << carObj2.year << "\n";
+  return 0;
+}
+
+// 3. MÉTODOS DE CLASSE  /*são funções que pertencem a classe*/
+/*existem duas maneiras de definir funções que pertencem a classe*/
+	- Classe Interna (definir os codigos da função dentro da propria classe, a qual fica antes do int main() )
+	- Classe Externa (definir os codigos da função depois da classe, mas também antes do int main() )
+
+>> Você acessa métodos como acessa atributos: criando um objeto da classe e usando a sintaxe do ponto <myObj.myMethod();>
+
+exemplo:
+class MyClass {        // The class
+  public:              // Access specifier
+    void myMethod();   // Method/function declaration
+};
+
+// Method/function definition outside the class
+void MyClass::myMethod() {
+  cout << "Hello World!";
+}
+
+int main() {
+  MyClass myObj;     // Create an object of MyClass
+  myObj.myMethod();  // Call the method
+  return 0;
+}
+
+** se fosse o método interno, a definição inteira estaria dentro da classe, durante o momento que foi declarada a função dentro da classe
+
+>> TAMBÉM PODE MANIPULAR OS DADOS UTILIZANDO PARAMETROS E ARGUMENTOS
+class Car {
+  public:
+    int speed(int maxSpeed);
+};
+
+int Car::speed(int maxSpeed) {
+  return maxSpeed;
+}
+
+int main() {
+  Car myObj; // Create an object of Car
+  cout << myObj.speed(200); // Call the method with an argument
+  return 0;
+}
+
+// 4. CONSTRUTORES /*é um método especial que é automaticamente chamado quando um objeto de uma classe é criado.*/
+Para criar um construtor, use o mesmo nome da classe, seguido de parênteses: nomeClasse(){}
+Nota: O construtor sempre tem o mesmo nome da classe e não tem nenhum valor de retorno
+>> O construtor serve para receber um valor de argumento e então manipula-los. É basicamente como se fosse uma função de manipulação
+
+class Car {        // The class
+  public:          // Access specifier
+    string brand;  // Attribute
+    string model;  // Attribute
+    int year;      // Attribute
+    Car(string x, string y, int z) { // Constructor with parameters
+      brand = x;
+      model = y;
+      year = z;
+    }
+};
+
+int main() {
+  // Create Car objects and call the constructor with different values
+  Car carObj1("BMW", "X5", 1999);
+  Car carObj2("Ford", "Mustang", 1969);
+
+  // Print values
+  cout << carObj1.brand << " " << carObj1.model << " " << carObj1.year << "\n";
+  cout << carObj2.brand << " " << carObj2.model << " " << carObj2.year << "\n";
+  return 0;
+}
+
+** OBS: Assim como funções, os construtores também podem ser definidos fora da classe. Primeiro, declare o construtor dentro da classe e,
+em seguida, defina-o fora da classe
+class Car {        // The class
+  public:          // Access specifier
+    string brand;  // Attribute
+    string model;  // Attribute
+    int year;      // Attribute
+    Car(string x, string y, int z); // Constructor declaration
+};
+
+// Constructor definition outside the class
+Car::Car(string x, string y, int z) {
+  brand = x;
+  model = y;
+  year = z;
+}
+
+int main() {
+  // Create Car objects and call the constructor with different values
+  Car carObj1("BMW", "X5", 1999);
+  Car carObj2("Ford", "Mustang", 1969);
+
+  // Print values
+  cout << carObj1.brand << " " << carObj1.model << " " << carObj1.year << "\n";  //carObj1.brand (notação ponto) //acessivel por notação por estar public
+  cout << carObj2.brand << " " << carObj2.model << " " << carObj2.year << "\n";
+  return 0;
+}
+
+// 5. ESPECIFICADORES DE ACESSO (PUBLIC x PRIVATE x PROTECTED)
+definem como os membros (atributos e métodos) de uma classe podem ser acessados.
+	- Public: podem ser acessados e modificados de fora da classe
+	- Private: os membros não podem ser acessados (ou visualizados) de fora da classe
+	- Protected: os membros não podem ser acessados de fora da classe, no entanto, eles podem ser acessados em classes herdadas
+Ponta: É considerado uma boa prática declarar seus atributos de classe como privados (sempre que você pode).
+Isso reduzirá a possibilidade de você (ou de outros) estragar o código. 
+Este também é o ingrediente principal do conceito encapsulamento, que você aprenderá mais sobre no próximo capítulo.
+
+// 6. ENCAPSULAMENTO //como acessar dados privados
+para acessar dados privados utilize, dentro do metodo publico, setVar() e getVar()  /*set para definir e get para acessar o dado*/
+
+#include <iostream>
+using namespace std;
+
+class Employee {
+  private:
+    // Private attribute
+    int salary;
+
+  public:
+    // Setter
+    void setSalary(int s) {
+      salary = s;
+    }
+    // Getter
+    int getSalary() {
+      return salary;
+    }
+};
+
+int main() {
+  Employee myObj;
+  myObj.setSalary(50000);
+  cout << myObj.getSalary();
+  return 0;
+}
+
+>> É considerado uma boa prática declarar seus atributos de classe como privados (sempre que você pode).
+Encapsulamento garante um melhor controle de seus dados, pois você (ou outros) pode alterar uma parte do código sem afetar outras partes.
+Maior segurança de dados.
+
+// 7. HERANÇA  //é de importante utilização para reutilizar codigos***
+/*é possível herdar atributos e métodos de uma classe para outra*/
+> HERENÇA
+classe derivada (criança) - a classe que herda de outra classe
+classe base (pai) - a classe que está sendo herdada
+
+** Para herdar de uma classe, use o símbolo :
+
+exemplo:
+// Base class
+class Vehicle {
+  public:
+    string brand = "Ford";
+    void honk() {
+      cout << "Tuut, tuut! \n" ;
+    }
+};
+
+// Derived class
+class Car: public Vehicle {
+  public:
+    string model = "Mustang";
+};
+
+int main() {
+  Car myCar;
+  myCar.honk();
+  cout << myCar.brand + " " + myCar.model;
+  return 0;
+}
+
+> HERANÇA MULTINIVEL  /*Uma classe também pode ser derivada de uma classe, que já é derivada de outra classe.*/
+
+// Base class (parent)
+class MyClass {
+  public:
+    void myFunction() {
+      cout << "Some content in parent class." ;
+    }
+};
+
+// Derived class (child)
+class MyChild: public MyClass {
+};
+
+// Derived class (grandchild)
+class MyGrandChild: public MyChild {
+};
+
+int main() {
+  MyGrandChild myObj;
+  myObj.myFunction();
+  return 0;
+}
+
+> HERANÇA MULTIPLA  /*Uma classe também pode ser derivada de mais de uma classe base, usando uma lista separa por virgulas*/
+essa classe com herança multipla recebe todos os atributos das classes a quem ela herdou
+// Base class
+class MyClass {
+  public:
+    void myFunction() {
+      cout << "Some content in parent class." ;
+    }
+};
+
+// Another base class
+class MyOtherClass {
+  public:
+    void myOtherFunction() {
+      cout << "Some content in another class." ;
+    }
+};
+
+// Derived class
+class MyChildClass: public MyClass, public MyOtherClass {
+};
+
+int main() {
+  MyChildClass myObj;
+  myObj.myFunction();
+  myObj.myOtherFunction();
+  return 0;
+}
+
+> ESPECIFICADORES DE ACESSO  /*quando o dado é descrito como protected, você pode ter acesso a esses dados criando uma classe que herda dos dados da classe pai
+// Base class
+class Employee {
+  protected: // Protected access specifier
+    int salary;
+};
+
+// Derived class
+class Programmer: public Employee {  	//aqui mesmo sendo a classe protected, pode escrever public que ela herda normal
+  public:
+    int bonus;
+    void setSalary(int s) {
+      salary = s;
+    }
+    int getSalary() {
+      return salary;
+    }
+};
+
+int main() {
+  Programmer myObj;
+  myObj.setSalary(50000);
+  myObj.bonus = 15000;
+  cout << "Salary: " << myObj.getSalary() << "\n";
+  cout << "Bonus: " << myObj.bonus << "\n";
+  return 0;
+}
+
+// 8. POLIMORFISMO
+Polimorfismo significa "muitas formas", e ocorre quando temos muitas classes que estão relacionadas entre si por herança. A herança nos permite herdar atributos e métodos de outra classe. O polimorfismo usa esses métodos para realizar diferentes tarefas. Isso nos permite realizar uma única ação de maneiras diferentes.
+// Lembre-se do capítulo Herança que usamos o :símbolo para herdar de uma classe. Agora podemos criar Pige Dogobjetos e sobrescrever o animalSound() (método)
+
+// Base class
+class Animal {
+  public:
+    void animalSound() {
+    cout << "The animal makes a sound \n" ;
+  }
+};
+
+// Derived class
+class Pig : public Animal {
+  public:
+    void animalSound() {
+    cout << "The pig says: wee wee \n" ;
+   }
+};
+
+// Derived class
+class Dog : public Animal {
+  public:
+    void animalSound() {
+    cout << "The dog says: bow wow \n" ;
+  }
+};
+
+int main() {
+  Animal myAnimal;
+  Pig myPig;
+  Dog myDog;
+
+  myAnimal.animalSound();
+  myPig.animalSound();
+  myDog.animalSound();
+  return 0;
+}
+
+Por que e quando usar "herança" e "polimorfismo"?
+- É útil para reutilização de código: reutilize atributos e métodos de uma classe existente ao criar uma nova classe.
+
+// 9. ARQUIVOS
+	adicionar as bibliotecas #include <iostream> 
+					 #include <fstream> //nos permite trabalhar com arquivos
+existem 3 classes dentro da biblioteca fstream
+	ofstream  //Creates and writes to files
+	ifstream  //Reads from files
+	fstream   //A combination of ofstream and ifstream: creates, reads, and writes to files
+
+>> CRIAR E GRAVAR UM ARQUIVO
+Para criar um arquivo, use a classe ofstream ou fstream e especifique o nome do arquivo.
+Para gravar no arquivo, use o operador de inserção (<<)
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main() {
+  // Create and open a text file
+  ofstream MyFile("filename.txt");
+
+  // Write to the file
+  MyFile << "Files can be tricky, but it is fun enough!";
+
+  // Close the file
+  MyFile.close();
+}
+
+** Por que fechamos o arquivo?
+É considerado uma boa prática e pode limpar espaço de memória desnecessário.
+
+>> LER UM ARQUIVO
+Para ler de um arquivo, use a classe ifstreamou fstream e o nome do arquivo.
+Observe que também usamos um whileloop junto com a função getline() (que pertence a classe ifstream) para ler o arquivo linha por linha e imprimir o conteúdo do arquivo:
+
+// Create a text string, which is used to output the text file
+string myText;
+
+// Read from the text file
+ifstream MyReadFile("filename.txt");
+
+// Use a while loop together with the getline() function to read the file line by line
+while (getline (MyReadFile, myText)) {
+  // Output the text from the file
+  cout << myText;
+}
+
+// Close the file
+MyReadFile.close();
+
+// 10. EXCEÇÕES
+Ao executar o código C++, diferentes erros podem ocorrer: erros de codificação feitos pelo programador, erros devido a entrada errada ou outros imprevistos.
+Quando ocorre um erro, o C++ normalmente para e gera uma mensagem de erro. O termo técnico para isso é: C++ lançará uma exceção (lançará um erro).
+
+	- instrução try permite que você defina um bloco de código para ser testado quanto a erros enquanto está sendo executado.
+	- A palavra-chave throw lança uma exceção quando um problema é detectado, o que nos permite criar um erro personalizado.
+	- instrução catch permite definir um bloco de código a ser executado, caso ocorra um erro no bloco try.
+
+try {
+  int age = 15;
+  if (age >= 18) {
+    cout << "Access granted - you are old enough.";
+  } else {
+    throw (age);
+  }
+}
+catch (int myNum) {	//da pra não definir o que vem no catch, para lidar com qualquer tipo de exceção. SINTAXE: catch(...){}  /*sim, os ... abrangem todo tipo de exceção que possa ocorrer*/
+  cout << "Access denied - You must be at least 18 years old.\n";
+  cout << "Age is: " << myNum;
+}

@@ -1,0 +1,16 @@
+>> 1. HTML
+>> 2. CSS
+	SASS https://www.w3schools.com/sass/default.php
+>> 3. JAVASCRIPT
+
+4. FULL STACK JAVASCRIPT
+	JavaScript - MongoDB - Express - AngularJS - Node.js
+>> more infos:
+>> FULL STACK JAVASCRIPT
+Program a browser (like using JavaScript, jQuery, Angular, or Vue)
+Program a server (like using Node.js)
+Program a database (like using MongoDB)
+
+5. PYTHON
+montar full stack python (django stack)
+Django stack: JavaScript - Python - Django - MySQL

@@ -1,0 +1,26 @@
+- HTML // The language for building web pages  (frontend)
+- CSS // The language for styling web pages  (frontend)
+- JAVA SCRIPT // The language for programming web pages  (frontend)
+- PYTHON // A popular programming language  (backend)
+- SQL // A language for accessing databases  (backend)
+- Java // A programming language  (backend)
+
+- W3.CSS // A CSS framework for faster and better responsive web pages  (frontend)
+- Bootstrap // A CSS framework for designing better web pages  (frontend)
+- jQuery // A JS library for developing web pages  (frontend)
+- TypeScript // JS with syntax for types  (frontend)
+- Node.js // allows you to run JavaScript on the server.  (backend)
+- React // React is a JavaScript library for building user interfaces.
+- Django // framework de desenvolvimento web em Python full stack, com banco de dados padrão SQL (frontend e backend)
+
+- PHP // A web server programming language  (backend) // linguagem que não vale a pena
+
+/* conforme https://www.w3schools.com/ */
+
+https://pt.linkedin.com/pulse/o-que-preciso-para-ser-um-programador-jr-daniel-oliveira
+
+https://www.linkedin.com/pulse/qual-o-melhor-curso-superior-de-ti-para-ser-um-daniel-oliveira/
+
+/*base da programação, tendo as cadeiras de Algoritmos e Lógica de Programação, Programação Orientada a Objetos, Estrutura de Dados e Banco de Dados. Essa é a base que nós precisamos para sermos programadores.*/
+
+/*Sistemas de Informação: possui tópicos de administração e gestão em TI, tecnologias web (HTML, CSS, JavaScript) e linguagens alto nível como Java, PHP, C#, etc. Foi o curso que me formei e particularmente gostei muito da base que me deu. Conhecer sobre administração é importante e nos dá uma outra visão de mundo.*/

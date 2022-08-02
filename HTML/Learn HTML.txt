@@ -1,0 +1,49 @@
+		-> HTML <-
+
+HTML é a linguagem padrão de marcação para criar páginas da Web
+HTML descreve a estrutura de uma página da Web. Consiste em uma série de elementos, os quais dizem ao navegador como exibir o conteúdo
+Elementos HTML rotulam peças de conteúdo como "este é um título", "este é um parágrafo", "este é um link", etc.
+
+// 1. SINTAXE BASICA:
+
+<!DOCTYPE html>  //diz que esse é um documento HTML5
+<html>  //elemento raiz de uma pagina HTML
+<head>	//elemento de cabeçalho
+<title>Page Title</title> //elemento especifica um título para a página HTML (que é mostrado na barra de título do navegador ou na guia da página
+</head>
+<body> //elemento define o corpo do documento, e é um recipiente para todos os conteúdos visíveis, como títulos, parágrafos, imagens, hiperlinks, tabelas, listas, etc
+<h1>My First Heading</h1> //define uma grande primeira posição (por exemplo um titulo do corpo)
+<p>My first paragraph.</p> //paragrafo
+</body>
+</html
+
+// 2. HTML BASICO:
+- Titulo:
+<h1>This is heading 1</h1>
+<h2>This is heading 2</h2>
+<h3>This is heading 3</h3>
+
+- Paragrafo:
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+- Links:
+<a href="https://www.w3schools.com">This is a link</a>
+
+- Imagens:  // definidas com a tag.<img> // arquivo de origem (), texto alternativo (), e são fornecidos como atributos:srcaltwidthheight
+<img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142"> 
+
+// 4. ELEMENTS
+// 5. ATTRIBUTES
+// 6. TITULOS
+// 7. PARAGRAFOS
+// 8. ESTILOS
+// 9. FORMATAÇÃO
+// 10. COTAÇÕES
+// 11. COMENTÁRIOS
+// 12. CORES
+// 13. HTML CSS
+// 14. LINKS
+// 15. IMAGENS HTML
+
+PAREI EM: https://www.w3schools.com/html/html_elements.asp

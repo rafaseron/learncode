@@ -1,0 +1,26 @@
+- Entendendo as regiões da RAM (seção 14 Udemy)
+- Revisar Funções
+- Revisar Ponteiros/Referencia
+- Revisar Structures
+- HTML
+- CSS
+- JavaScript
+
+basicamente: a POO faz com que separemos o codigo em classes, com o objetivo de instanciar um objeto.
+durante a resolução das classes, focamos em funções (usamos muito função e utilizamos argumentos para adicionar os dados dentro da mesma, a serem manipulados).
+> usamos funções void (são manipuladas com argumentos, mas não retorna valor) e funções definidas // int myFunction (int x){
+																	    return 5 + x;  }
+
+basicamente: C++, gira em torno de montar funções que instanciam, posteriormente, objetos
+
+
+COMENTÁRIOS:
+
+Udemy C++ >> Seção 8: funções conceitos e desenvolvimento  //ESSE PULEI, VOLTE APENAS SE SENTIR NECESSIDADE, POIS TERMINEI ESSE ASSUNTO NO W3 SCHOOLS
+/*acabei Funções na W3 (lembre-se que no curso da Udemy tem muito mais informações sobre ponteiros e funções)*/
+
+DEVE VALER A PENA SE APROFUNDAR EM Udemy Seção 12. Aritmetica de Ponteiros e a relação com Vetores *(ptr+2), ptr++, ptr--, *ptr
+
+
+
+REFERENCIA // https://www.w3schools.com/

@@ -1,0 +1,50 @@
+		conteudo base do site: https://www.w3schools.com/whatis/default.asp
+
+>> 1. HTML
+1. Create your first web page
+The first thing you have to learn, is HTML, which is the standard markup language for creating web pages.
+
+>> 2. CSS
+2. Style your web page
+The next step is to learn CSS, to set the layout of your web page with beautiful colors, fonts, and much more.
+
+>> 3. JAVASCRIPT
+3. Make your web page interactive
+After studying HTML and CSS, you should learn JavaScript to create dynamic and interactive web pages for your users.
+
+>> 4. PYTHON
+fazer backend para fazer o site ficar de estático para dinamico (de front para backend)
+
+>> 5. SQL
+comunicação com databases
+
+>> EXTRA: Node.JS // permite executar JavaScript fora de um navegador web
+tem integração nativa com Azure, AWS e Google Cloud
+
+/*4 e 5 SÃO BACKEND*/
+
+	/* Now you know how to use HTML, CSS, and JavaScript
+	to create, style, and make interactive web pages.
+	The next step is to publish your website,
+	so that the rest of the world can see your work.*/
+
+>> FRONT END DEVELOPER // client-side (how a web page looks). // STATIC WEBSITES
+Many Front-End Developers also have basic knowledge of different CSS and JavaScript frameworks and libraries, like Bootstrap,
+SASS (CSS pre-processor), jQuery and React, and the popular version control system, Git.
+
+>> BACK END DEVELOPER // server-side (how a web page works). // DYNAMIC WEBSITES (manage files and databases, add contact forms, control user-access..)
+PHP or Python, and use SQL to communicate with databases.
+
+>> FULLSTACK DEVELOPER // https://www.w3schools.com/whatis/whatis_fullstack.asp
+
+>> POPULAR STACKS (combos)
+MEAN stack: JavaScript - MongoDB - Express - AngularJS - Node.js /*hot*/
+Django stack: JavaScript - Python - Django - MySQL 		     /*hot*/
+LAMP stack: JavaScript - Linux - Apache - MySQL - PHP
+LEMP stack: JavaScript - Linux - Nginx - MySQL - PHP
+Ruby on Rails: JavaScript - Ruby - SQLite - Rails
+
+>> FULL STACK JAVASCRIPT
+Program a browser (like using JavaScript, jQuery, Angular, or Vue)
+Program a server (like using Node.js)
+Program a database (like using MongoDB)

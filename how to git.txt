@@ -1,0 +1,44 @@
+>> IDENTIFICAÇÃO
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+
+> COMO CRIAR UM REPOSITORIO LOCAL
+// git bash here (dentro da pasta)
+
+git init // para criar um repositorio local dentro da pasta
+git add readme.md // adicionar o arquivo readme.md para lista de espera
+	ou 
+git add . // para adicionar todos arquivos da pasta para lista de espera
+git status // para verificar o status dos arquivos que estão na espera esperando para serem commitados
+git commit -m "titulo do commit"
+git branch -M "main" // trocar o nome da branch master para main
+
+> COMO LINKAR O REPOSITORIO DO GITHUB AO GIT LOCAL
+
+git remote add origin https://github.com/rafaseron/github.git /*adiciona a conexão do repositorio do github com o repositorio local e o nomeia o repositorio do github como origin */
+git push -u origin "main" // empurrar os commits do repositorio local pro repositorio do github (online)
+
+> MANUTENÇÃO DA MAIN
+clear // limpar a tela, para deixar mais limpa
+git add . // irá mandar todos os arquivos com atualizações pra area de espera do commit
+git commit -m "titulo do commit"
+git push origin main // depois de acionar a origem, você não precisa mais escrever o -u, é apenas na primeira vez
+
+> COMO FAZER UMA BRANCH (UMA FEATURE NOVA É ADICIONADA POR BRANCH)
+git checkout -b "novo-botao" // cria uma branch nova e a acessa
+git add . // adiciona as atualizações para a fila de espera
+git commit -m "novo botao" // cria o commit referente a branch
+git push origin novo-botao // manda pro servidor do github (origin)
+
+// DEPOIS É SÓ FAZER UM MERGE DA BRANCH NO GITHUB PARA ADICIONAR OS RECURSOS DA BRANCH AO ARQUIVO MAIN
+> MERGE POR CODIGO
+git checkout main // para fazer o switch para a main no git bash
+git merge novo-botao // codigo do merge, para puxar as infos
+git push origin main // para empurrar o merge ao servidor do github
+
+> CLONE // copiar os arquivos para outra maquina
+git clone https://github.com/rafaseron/github.git // link do repositorio
+
+> ATUALIZAR ARQUIVOS CLONADOS 
+git pull // puxar as atualizações
