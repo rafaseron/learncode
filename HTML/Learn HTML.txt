@@ -3,6 +3,7 @@
 HTML é a linguagem padrão de marcação para criar páginas da Web
 HTML descreve a estrutura de uma página da Web. Consiste em uma série de elementos, os quais dizem ao navegador como exibir o conteúdo
 Elementos HTML rotulam peças de conteúdo como "este é um título", "este é um parágrafo", "este é um link", etc.
+*HTML não é case sensitive
 
 // 1. SINTAXE BASICA:
 
