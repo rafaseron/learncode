@@ -65,4 +65,4 @@ Elementos HTML rotulam peças de conteúdo como "este é um título", "este é u
 // 13. LINKS
 // 14. IMAGENS HTML
 
-PAREI EM: https://www.w3schools.com/html/html_elements.asp
+PAREI EM: https://www.w3schools.com/html/html_attributes.asp
