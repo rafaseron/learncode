@@ -14,3 +14,15 @@ Program a database (like using MongoDB)
 5. PYTHON
 montar full stack python (django stack)
 Django stack: JavaScript - Python - Django - MySQL
+
+GUIDELINE:
+
+- Entenda como a web funciona
+- Aprenda HTML
+- Aprenda CSS
+- Aprenda JavaScript (junto a lógica)
+- Aprenda Frameworks para acelerar a construção de tela (Bootstramp ou Tailwind)
+- Aprenda Framework JS (React, Angular ou Vue)
+- Aprenda Linguagem de BackEnd (php, Python, Js[node.js], envolvendo Banco de Dados) 
+- Aprenda a trabalhar com APIs
+Dica : Abuse do Youtube e use a documentação das linguagens
