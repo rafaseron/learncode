@@ -5,46 +5,64 @@ HTML descreve a estrutura de uma página da Web. Consiste em uma série de eleme
 Elementos HTML rotulam peças de conteúdo como "este é um título", "este é um parágrafo", "este é um link", etc.
 *HTML não é case sensitive
 
+>> COMO VALIDAR SE O CODIGO HTML ESCRITO ESTÁ CORRETO: https://validator.w3.org
+
 // 1. SINTAXE BASICA:
 
 <!DOCTYPE html>  //diz que esse é um documento HTML5
-<html>  //elemento raiz de uma pagina HTML
+<html lang="pt-BR">  //elemento raiz de uma pagina HTML
+
 <head>	//elemento de cabeçalho
-<title>Page Title</title> //elemento especifica um título para a página HTML (que é mostrado na barra de título do navegador ou na guia da página
+<meta charset="utf-8">  //metadados da codificação de caracteres que estarão na pagina
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Page Title </title> //elemento especifica um título para a página HTML (que é mostrado na barra de título do navegador ou na guia da página
 </head>
+
+/*a TAG head inteira são apenas de metadados sobre o HTML*/
+
 <body> //elemento define o corpo do documento, e é um recipiente para todos os conteúdos visíveis, como títulos, parágrafos, imagens, hiperlinks, tabelas, listas, etc
-<h1>My First Heading</h1> //define uma grande primeira posição (por exemplo um titulo do corpo)
-<p>My first paragraph.</p> //paragrafo
+<h1> My First Heading </h1> //define uma grande primeira posição (por exemplo um titulo do corpo)
+<p> My first paragraph. </p> //paragrafo
 </body>
-</html
+
+/*a TAG body é tudo que o usuario numa pagina web (front end)*/
+
+</html>
 
 // 2. HTML BASICO:
 - Titulo:
-<h1>This is heading 1</h1>
-<h2>This is heading 2</h2>
-<h3>This is heading 3</h3>
+<h1> This is heading 1 </h1>
+<h2> This is heading 2 </h2>
+<h3> This is heading 3 </h3>
 
 - Paragrafo:
-<p>This is a paragraph.</p>
-<p>This is another paragraph.</p>
+<p> This is a paragraph. </p>
+<p> This is another paragraph. </p>
 
 - Links:
-<a href="https://www.w3schools.com">This is a link</a>
+<a href="https://www.w3schools.com"> This is a link </a>
 
 - Imagens:  // definidas com a tag.<img> // arquivo de origem (), texto alternativo (), e são fornecidos como atributos:srcaltwidthheight
 <img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142"> 
 
-// 4. ELEMENTS
-// 5. ATTRIBUTES
-// 6. TITULOS
-// 7. PARAGRAFOS
-// 8. ESTILOS
-// 9. FORMATAÇÃO
-// 10. COTAÇÕES
-// 11. COMENTÁRIOS
-// 12. CORES
-// 13. HTML CSS
-// 14. LINKS
-// 15. IMAGENS HTML
+// 3. ELEMENTS
+
+- Quebra de linha: tag <br>
+<p>This is a <br> paragraph with a line break.</p>
+
+// 4. ATTRIBUTES  /*anatomia das tags*/
+<nomedatag  atributo="valor">
+
+
+// 5. TITULOS
+// 6. PARAGRAFOS
+// 7. ESTILOS
+// 8. FORMATAÇÃO
+// 9. COTAÇÕES
+// 10. COMENTÁRIOS
+// 11. CORES
+// 12. HTML CSS
+// 13. LINKS
+// 14. IMAGENS HTML
 
 PAREI EM: https://www.w3schools.com/html/html_elements.asp
