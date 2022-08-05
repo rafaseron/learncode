@@ -45,12 +45,16 @@ Elementos HTML rotulam peças de conteúdo como "este é um título", "este é u
 - Imagens:  // definidas com a tag.<img> // arquivo de origem (), texto alternativo (), e são fornecidos como atributos:srcaltwidthheight
 <img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142"> 
 
-// 3. ELEMENTS
+// 3. ELEMENTS /*O elemento HTML é tudo, desde a tag inicial até a tag final*/
 
-- Quebra de linha: tag <br>
+exemplo: <h1>	My First Heading	</h1>
+	tag inicial		elemento	tag final
+
+
+** Quebra de linha: tag <br>
 <p>This is a <br> paragraph with a line break.</p>
 
-// 4. ATTRIBUTES  /*anatomia das tags*/
+// 4. ATTRIBUTES  /*anatomia das tags*/   /***Todos os elementos HTML podem ter atributos*/  /*são os dados que ficam e acompanham as tags, para identificar, definir, dentre outras funções*/
 <nomedatag  atributo="valor">
 
 - href //é um atributo de dentro da tag <a> (links)
@@ -80,8 +84,55 @@ exemplo:
 <p title='John "ShotGun" Nelson'>
 <p title="John 'ShotGun' Nelson">
 
-// 5. TITULOS
+// 4.1 ATRIBUTOS: id (identificadores) e class  /*entendendo sua importante e uso*/
+por regra na hora de escrita, o id pode ter um valor unico em cada pagina. já as classes, podemos repetir sua nomenclatura.
 
+<h1 id="cabecalho-1" class="escrita vermelha">  </h1>
+<h1 id="cabecalho-2" class="escrita vermelha">  </h1>  //vejamos que não repetimos o valor do identificador da primeira liha. já as classes, podemos ter repetições.
+ 
+/*o id serve para identificar determinado e unico item especifico na pagina.*/	/*é identificação é importantissima na hora de utilizar CSS e JS*/
+
+<h1 id="cabecalho-2" class="escrita vermelha letra-negrito">  //podemos ter mais de uma classe por atributos também. 
+
+**exemplo de uso de id com CSS basico:
+
+<head>
+   <style>
+	h1{					/*quando vamos identificar um atributo HTML para ser aplicado CSS: escrevemos apenas o nome do atributo: h1*/
+		background: blue;
+	}
+	#cabecalho-2{		/*quando vamos identificar um id (identificador) para ser aplicado CSS: escrevemos #nome-identificador: #cabecalho-2*/
+		background: red;
+		
+	.escrita-vermelha{	/*quando vamos identificar uma classe HTML para ser aplicado CSS: escrevemos apenas .nome-classe: .escrita-vermelha*/
+		background: green;
+	}
+
+	}
+   </style>
+</head>
+
+<body>
+<h1 id="cabecalho-1" class="escrita-vermelha">  </h1>
+<h1 id="cabecalho-2" class="escrita-vermelha">  </h1>
+</body>
+
+**EXISTE ORDEM DE PRIORIDADE: uma tag id é uma das mais altas prioridades na hora de aplicar o CSS. Seu uso sobrescreve todos os usos de outro tipo de identificação
+o id só não sobrescreve se escrevemos que é !important, por exemplo: background: green !important;  /*não é recomendado utilizar muito, pois força o navegador*/
+> DICA: priorizar utilizar as classes, primeiramente, na hora de estilizar com CSS
+
+// 5. TITULOS  /*tags de cabeçalho*/   //uma das tags mais importantes da pagina. é, por exemplo, uma das tag que o Google e Bing utilizam para mostrar o conteudo no buscador
+<h1> titulo da noticia </h1>  
+
+>> Vão de h1 até h6 (sua ordem de grandeza [referindo-se a semantica] ou prioridade, quanto tamanho)  /*também, diz respeito a quais itens serão lidos como titulos e subtitulos por aparelhos e recursos (software) de leitura
+por acessibilidade de problemas visuais*/
+
+<h1> </h1>  //mais importante
+<h2> </h2>  //menos importante que o h1
+<h3> </h3>  //menos importante que o h2
+<h4> </h4> //menos importante que o h3
+<h5> </h5>		...
+<h6> </h6>		...
 
 // 6. PARAGRAFOS
 // 7. ESTILOS
