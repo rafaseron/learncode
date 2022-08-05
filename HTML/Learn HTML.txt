@@ -134,6 +134,45 @@ por acessibilidade de problemas visuais*/
 <h5> </h5>		...
 <h6> </h6>		...
 
+// 6. TAGS HTML  /*notas por importancia sobre um texto de acessibilidade e algumas outras tags*/
+
+>> TAGS ABAIXO PODEM SER UTILIZADAS DENTRO DE UM PARAGRAFO (TAGS INLINE) <p> </p>
+
+	- bold vs strong
+		<b> </b> :tag que adiciona negrito na palavra -> é um estado fisico (de letra pequena a negrito)
+		<strong> </strong> : tag que muda o sentido lógico da palavra -> é um estado logico (interpretado pelos leitores de acessibilidade, palavra mais forte)
+
+	- italico vs enfaze
+		<i> </i> :tag que adiciona italico na palavra
+		<em> </em> :tag que visualmente é igual a italico, mas muda o significado de uma palavra, da mais enfase
+
+	- del vs s
+		<s> </s>: tag que visualmente adiciona o riscado no texto
+		<del> </del> :tag que visualmente ... e semanticamente deleta uma palavra, com fins de inserir outra
+
+	- in (insert) vs u
+		<u> </u>: tag que visualmente adiciona um sublinhado
+		<in> </in> :tag que visualmente ... e semanticamente insere uma palavra, e a destaca por estar sendo inserida por meios de uma errata
+
+- small: <small> </small>: letra pequena
+- sup: <sup> </sup>: letra de potencia ² ³
+- sub: <sub> </sub>: letra pequena no meio da palavra (em H2O, o 2 é para ser pequeno, sub)
+- <br>: quebra de linha. tag não tem corpo, é só escrever;
+- <q> </q>: uma "citação"  -> ex de uso:   <q cite="https://www.site ..."> texto retirado do site citado anteriormente </q>
+- <span> </span>: tag inline, da pra utilizar para aplicar css numa palavra (tamanho, cor, etc) ou trecho especifico no meio do paragrafo
+
+>> TAGS FORA DE PARAGRAFOS <p> </p>
+	- Tags de bloco (BLOCKED, SÃO BLOCOS TEM PRIORIDADE SEMANTICA) -> podem existir paragrafos dentro do bloco, mas não podem ter (semanticamente), blocos dentro de paragrafos -> como se bloco fosse a pasta raiz / e paragrafo a /home
+exemplo: <blockquote cite="https://www.site ..."> <p> paragrafo de citação dentro do bloco, raiz </p> </blockquote>
+
+	- <hr> :tag de linham para dividir um paragrafo de outro
+
+	- <code> </code> :tag que indica que é uma linha de codigo -> mudança apenas visual no monoespaçamento das letras
+		***quando a tag code é utilizada dentro da tag pre (ao inves de só: p) -> espaça certinho o codigo -> exemplo de uso:   <pre> <code> </code> </pre>
+>> tag <pre> </pre> : utiliza a preformatação de como ficou o codigo. como se fosse o word quando pega as infos do site já preformatadas.
+
+	- <div> </div> :bloco de divisão
+
 // 6. PARAGRAFOS
 // 7. ESTILOS
 // 8. FORMATAÇÃO
@@ -144,4 +183,5 @@ por acessibilidade de problemas visuais*/
 // 13. LINKS
 // 14. IMAGENS HTML
 
-PAREI EM: https://www.w3schools.com/html/html_attributes.asp
+W3 -> PAREI EM: https://www.w3schools.com/html/html_paragraphs.asp
+UDEMY -> PAREI EM: 559. Conheça todas as tags HTML
