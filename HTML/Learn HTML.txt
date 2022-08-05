@@ -185,3 +185,8 @@ exemplo: <blockquote cite="https://www.site ..."> <p> paragrafo de citação den
 
 W3 -> PAREI EM: https://www.w3schools.com/html/html_paragraphs.asp
 UDEMY -> PAREI EM: 559. Conheça todas as tags HTML
+
+	basicamente: na udemy já começou estes conteudos:
+			https://www.w3schools.com/html/html_id.asp
+			https://www.w3schools.com/html/html_classes.asp
+			https://www.w3schools.com/html/html_blocks.asp
