@@ -53,8 +53,36 @@ Elementos HTML rotulam peças de conteúdo como "este é um título", "este é u
 // 4. ATTRIBUTES  /*anatomia das tags*/
 <nomedatag  atributo="valor">
 
+- href //é um atributo de dentro da tag <a> (links)
+<a href="https://www.w3schools.com">Visit W3Schools</a>
+
+- src //atributo de img. especifica o caminho para ser exibida a imagem
+<img src="img_girl.jpg">
+
+- width e height //atributo de largura e altura da imagem
+<img src="img_girl.jpg" width="500" height="600">
+
+- alt //especifica um texto alternativo para caso a imagem não carregue corretamente
+<img src="img_girl.jpg" alt="Girl with a jacket">
+
+- estilo //adicona cor, fonte, tamanho, etc.
+<p style="color:red;">This is a red paragraph.</p>
+
+- lang //declara o idioma dentro da tag HTML
+<html lang="en">
+
+- tittle //atributo do paragrafo <p> : o valor do atributo é visualizado como uma dica/ferramenta quando coloca o mouse em cima
+<p title="I'm a tooltip">This is a paragraph.</p>
+
+> Sobre aspas simples e duplas: recomenda-se o uso de aspas para definir algum valor a um atributo. Temos um uso variavel de uso das aspas,
+quando o conteudo declarado necessita, também, de aspas.
+exemplo:
+<p title='John "ShotGun" Nelson'>
+<p title="John 'ShotGun' Nelson">
 
 // 5. TITULOS
+
+
 // 6. PARAGRAFOS
 // 7. ESTILOS
 // 8. FORMATAÇÃO
