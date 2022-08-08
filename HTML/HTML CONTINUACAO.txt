@@ -1,0 +1,11 @@
+TUDO QUE JÁ APRENDI ATÉ AGORA
+
+- ESTRUTURA BASICA
+- META VIEW PORT
+- ATRIBUTOS E ID CLASS
+- DIFERENÇA ENTRE HEADINGS (H1 AO H6)
+- TAGS HTML //apresentação de que existem muitas e você deve ir consultando enquanto faz um projeto
+- SEMANTICA NA ESTRUTURA DO HTML5 //importancia da semantica para acessibilidade e como verificar isso
+- PENSANDO EM HTML E CSS (metodo de como pensar) //TUDO É POSICIONADO PENSANDO EM BLOCOS, APRESENTAÇÃO DE COMO É
+- INTRODUÇÃO AO CSS BOX MODEL //sobre definir sua altura, largura e ouutras propriedades
+// diferença entre margin, border, padding, content edge
