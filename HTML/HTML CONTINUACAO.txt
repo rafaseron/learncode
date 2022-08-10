@@ -9,3 +9,6 @@ TUDO QUE JÁ APRENDI ATÉ AGORA
 - PENSANDO EM HTML E CSS (metodo de como pensar) //TUDO É POSICIONADO PENSANDO EM BLOCOS, APRESENTAÇÃO DE COMO É
 - INTRODUÇÃO AO CSS BOX MODEL //sobre definir sua altura, largura e outras propriedades
 // diferença entre margin, border, padding, content edge
+- CRIAR MENUS UTILIZANDO LISTAS
+// aqui é utilizado, as vezes, transformar conteudo inline em block, para poder
+estilizar seu tamanho, padding, margin, etc
