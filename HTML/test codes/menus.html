@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!-- para fazer menus (nav), utilizamos listas, zeramos sua formatação incial e depois ajustamos usando CSS -->    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas e Menus</title>
+ <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    nav{
+        
+        background-color: red;
+
+    }
+    body nav ul li a{
+        color:#fff;
+        text-decoration: none;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        display: block;
+        margin: 10px;
+        text-transform: uppercase;
+        padding: 20px;
+        
+    }
+    nav ul{
+        display:flex;
+        list-style-type: none;
+        justify-content: center;
+        
+    }
+    nav a:hover{
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+ </style> 
+ <!--ali em cima eu especifiquei o caminho todo (body nav ul li a), para mostrar como apontar de forma muito especifica. poderia usar apenas
+"nav a", para estilizar todos elementos dentro de nav que sejam a (link)-->  
+</head>
+<body>
+<nav>
+    <ul>
+        <li> <a href="#"> HOME </a> </li>
+        <li> <a href="#"> PRODUCTS </a> </li>
+        <li> <a href="#"> SAC </a> </li>
+        <li> <a href="#"> TRABALHE CONOSCO </a> </li>
+    </ul> 
+
+</nav>    
+
+
+    <header>
+    <!-- lista não ordenada-->    
+        <ul>
+            <li> 1 </li>
+            <li>2 </li>
+            <li> 3 </li>
+            <li> 4 </li>
+        </ul>
+    <!-- lista ordenada -->   
+        <ol type="1" start="20">    <!-- pode ser selecionado seu tipo e de qual ponto inicia a contagem -->
+            <li> Teste </li>
+            <li> Teste </li>
+            <li> Teste </li>
+        </ol> 
+        
+    <dl>
+        <dt> Café </dt>     <!-- nome do item -->
+        <dd> bebida preta quente</dd>   <!--descrição do item-->
+        <dt> Chá </dt>
+        <dd> bebida verde quente </dd>
+    </dl>    
+    </header>
+    
+</body>
+</html>
