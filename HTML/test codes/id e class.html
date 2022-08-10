@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEU SITE</title>
+
+    <!-- estilizamos aqui na tag HEAD, utilizando a tag STYLE e apontando utilizando os atributos de class e id-->
+    <style>
+        #fonte-azul {
+            color: blue ;
+            <!--desta forma estilizamos apontando pro atributo id-->
+        }
+
+        
+        .fundo-vermelho{
+            background-color: red;
+            <!--desta forma estilizamos apontando pro atributo class-->
+        }
+
+        p {
+            color:blueviolet;
+            <!-- desta forma, conseguimos apontar para estilizar uma tag inteira -->
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <!-- lembre-se que as tags HTML tem atributos e "valor declarado": <nomedatag  atributo="valor"> -->
+    <!-- ATRIBUTOS: utilizamos classes para separar mesmos elementos, que devem ser estilizados de forma diferente durante a tag style -->
+    <h1 class="fundo-vermelho"> TITULO PRINCIPAL DO SITE </h1>
+    <h1 class="fundo-verde"> SEGUNDO TITULO DO SITE </h1>
+
+    <!-- também temos o id. este funciona da mesma maneira, mas deve ser utilizado com planejamento, pois só poderá existir um id
+    com aquele nome na pagina HTML inteira  -->
+
+    <h1 id="fonte-azul" class="fundo-vermelho"> TITULO PRINCIPAL DO SITE </h1>
+    <h1 id="fonte-preta" class="fundo-vermelho"> TITULO PRINCIPAL DO SITE </h1>
+
+    <!-- percebe-se que podemos repetir o atributo class em varios e distintos elementos. já o atributo id, pode-se ser utilizado uma unica vez -->
+    <p> este é um <b>paragrafo</b> </p>
+    <p> aqui temos uma <br> quebra de linha </p>
+
+</body>
+</html>
