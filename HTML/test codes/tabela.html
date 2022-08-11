@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABELA TEST</title>
+    <style>
+        .reponsive-table{ 
+            max-width: 100%;
+            overflow-x: auto;
+        }
+
+        table{
+            border-collapse: collapse;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            width: 100%;
+        }
+        table thead tr th, table tbody tr td{
+            border: solid black;
+            padding: 5px;
+            text-align: left;
+        }
+        table caption{
+            text-align: left;
+            caption-side: bottom;
+            font-style: italic;
+            margin-top: 5px;
+        }
+        table tfoot tr td{
+            border: solid black;
+            padding: 5px;
+            text-align: left;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+<div class="resposive-table"> <!-- verificar a classe na tag style-->
+    <!-- adicionamos um overflow, para que se a tabela fique num tamanho maior que a tela do celular, o celular possa fazer scroll pros lados
+    apenas da tabela, o site continua estatico -->
+    <table>
+        <caption> descrição para a tabela </caption>
+        <!-- THEAD é o cabecalho da tabela. TR significa que a tag THEAD ta recebendo UMA LINHA. TH é a tag de COLUNAS-->
+        <thead>
+            <tr> <!--tag que representa a adição de uma linha-->
+                <th> TIULO-COLUNA 1 </th>
+                <th> TIULO-COLUNA 2 </th> <!-- tres tags TH significam 3 colunas-->
+                <th> TIULO-COLUNA 3 </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td> CORPO-COLUNA 1 </td>
+                <td> CORPO-COLUNA 2 </td>
+                <td> CORPO-COLUNA 3 </td>
+            </tr>
+            <tr>
+                <td rowspan="2"> CORPO-COLUNA 1 </td> <!-- com o rowpan, podemos fazer a coluna selecionada ocupar 2 linhas-->
+                <td> CORPO-COLUNA 2 </td>
+                <td> CORPO-COLUNA 3 </td>
+            </tr>
+            <tr>
+                <!--aqui era para ter um CORPO-COLUNA 1, mas está com o espaços sendo ocupado pelo rowspan da CORPO-COLUNA 1 -->
+                <td> CORPO-COLUNA 2 </td>
+                <td> CORPO-COLUNA 3 </td>
+            </tr>
+            
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="3"> FOOTER </td> <!-- utilizando o colspan, podemos fazer com que uma linha ocupe as 3 colunas-->
+            </tr>
+        </tfoot>
+
+    </table>
+</div>    
+</body>
+</html>
