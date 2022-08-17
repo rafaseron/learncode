@@ -12,3 +12,7 @@ TUDO QUE JÁ APRENDI ATÉ AGORA
 - CRIAR MENUS UTILIZANDO LISTAS
 // aqui é utilizado, as vezes, transformar conteudo inline em block, para poder
 estilizar seu tamanho, padding, margin, etc
+- TABELAS HTML
+// tabela tem head, body e footer. também descrição (caption: legenda)
+// podemos fazer uma coluna ocupar 2 ou mais espaços com colspan e atribuindo valor
+// podemos fazer uma linha ocupar 2 ou mais espaços usando rowspan e atribuindo valor
