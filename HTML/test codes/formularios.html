@@ -1,17 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FORMULARIOS</title>
     <style>
-        
+        label{
+            cursor:pointer;
+        }
+        .longe-do-input{
+            display: block;
+        }
+        .checkbox{
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
-    <form>
-        
+    <form action="#" method="get" target="_blank" autocomplete="off"> <!-- action diz para qual URL estamos enviando os resultados do form-->
+        <section>
+            <h1> TITULO </h1>
+            <p> o formulario </p>
+            <fieldset> 
+                <legend> descrição do form </legend>
+                <p>
+                    <input type="text">
+                </p>
+            </fieldset>
+        </section>
     </form>
+
+<!-- isso tudo acima é só para mostrar que um formulario pode ter toda uma estrutura completa e complexa. mas vamos utiliza-lo da forma mais objetiva-->
+
+<div>
+<!-- input de texto -->    
+    <form action="#" method="get" target="_blank" autocomplete="off">
+        <p> o meu formulario </p>
+        <p>
+            <input type="text" id="nome" name="nome" placeholder="seu nome" readonly>  <!--temos atributos como READONLY e DISABLED-->
+        </p>
+    </form>
+</div>
+
+<div>
+<!-- input de email -->    
+    <form action="#" method="get" target="_blank" autocomplete="off">
+        <p> o meu formulario </p>
+    <label for="email" class="longe-do-input"> email </label> <!-- se utilizarmos o label longe do input, podemos fazer ele se ligar com o mesmo utilizando
+    o atributo FOR e definidno o valor sendo o ID do input-->
+        <p>
+            Email
+            <input type="email" id="email" name="email" placeholder="seu endereço de e-mail" required> <!--colocar required diz que o campo é obrigatorio-->
+        </p>
+    </label>
+        <!-- temos botões que fazem funções dentro do FORM-->
+        <p>
+            <button type="submit"> Enviar </button>
+            <button type="reset"> Resetar </button>
+        </p>
+    </form>
+</div>
+
+<!-- input de checkbox-->
+<div class="checkbox">
+<form action="#" method="get" target="_blank">
+    <label for="dev"> Sou um dev </label>
+    <input type="checkbox" id="dev" name="desenvolvedor" checked> <!--colocar checked ele já vem marcado como padrão-->
+    <button type="submit"> Enviar resposta </button>
+</div>
+
+<!-- input de RADIO (escolher apenas uma)-->
+<div>
+    <form>
+        <input type="radio" name="genero" id="masculino" name="genero" value="masculino">  <!--value é o valor que chegará no backend-->
+        <label for="masculino"> Masculino </label>
+        
+        <input type="radio" name="genero" id="feminino" name="genero" value="feminino"> <!-- o name é GENERO pois indica que todos os inputs desse NAME
+        são itens da mesma categoria, e não podem ser selecionados em mais de um-->
+        <label for="feminino"> Feminino </label>
+        
+        
+        <button type="submit"> enviar resposta </button>
+    </form>
+
+</div>
+
+
 </body>
 </html>
