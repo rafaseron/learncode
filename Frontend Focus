@@ -1,0 +1,74 @@
+FRONT END FOCUS
+
+- HTML
+
+    HTML não é uma linguagem de programação, mas sim uma linguagem de marcação utilizada na construção de páginas na Web. e é fundamental se você deseja trabalhar com WEB.
+
+- CSS
+
+    Basicamente é a forma de você enfeitar seu codigo HTML, você colocar estilos neles.
+
+- Javascript
+
+    é uma linguagem de programação que está presente em todas as paginas que você acessar na internet, na verdade todas não, pois ainda existem paginas estaticas, mas qualquer pagina onde haja qualquer interação, ela contem javascript, alias, basicamente o resultado que você ve das paginas que você acessa são basicamente a Junção de HTML, CSS e Javascript.
+
+    Se você ir com o botão direito no navegador de vocês e clicar em ver codigo fonte, o que você vai ver ali é exatamente essas tecnologias!
+
+    - Typescript
+
+        Como javascript é fracamente tipada a microsoft criou o Typescript para adicionar tipagem e alguns outros recursos ao javascript.
+
+        Eu Diria que Typescript não é um requisito para se tornar um Web Developer, mas é altamente recomendado pois muitas empresas ja aderiram ao uso e é muito requisitado nas vagas.
+
+- JavaScript Frameworks
+
+    Nos conseguimos fazer praticamente tudo usando apenas javascript vanilla, ele puro sem um framework, mas cada vez o uso de frameworks está maior dentro das empresas e com a morte do Jquery e surgimento de outros no mercado eu recomendo que vocês apredam pelo menos um entre esses 3
+
+    - React (Recomendado)
+    - Angular
+    - Vue
+- CSS Frameworks
+
+    da mesma forma do javascript, você tambem consegue fazer qualquer efeito usando css puro, mas os frameworks são uma mão na roda e junto com javascript entregam diversos componentes visuais prontos para nos, os mais comuns no mercado hoje são: recomendo que escolha um deles
+
+    - Booststrap
+    - Material UI
+    - Semantic UI
+- CSS Preprocessors
+
+    são basicamente scripts que extendem as funcionalidades do CSS e deixando eles mais "programaveis", eles ajudam em automatizar, reusar e evitar erros em css. também diria que não é obrigatório, mas é bom você saber pelo menos 
+
+    - sass
+    - less
+
+RESTful Services/APIs
+
+Eu não vou entrar em detalhes nesse aqui pois cabe um vídeo exclusivo sobre isso, masrestful services, API e webservices são a forma que você vai se comunicar com o backend para consultar dados em um banco de dados por exemplo. você pode utilizar esses servicos diretamente com  requisições HTTP ou utilizar uma Query Language para fazer isso.
+
+nesse caso eu tambem diria que não é obrigatório, mas fortemente recomendado que vocês conheçam:
+
+- GraphQL
+
+    que é uma query language criada pelo facebook e é uma alternativa a arquitetura REST.
+
+- Responsive/Mobile Design
+
+    ou Design responsivo é uma abordagem onde você renderiza suas paginas HTML dependendo do tamanho e do tipo de dispositivo. nesse caso é uma forma de você fazer uma unica pagina que saiba se acomodar tanto em um monitor 4k, quanto em um celular ou tablet sem você precisar fazer uma pagina diferente para cada um deles.
+
+- Cross-Browser Development
+
+    Pra ser honesto com vocês, esse foi um dos motivos de eu ter desistido do frontend la em 2012. 
+
+    é você garantir que sua pagina vá funcionar perfeitamente em um numero aceitavel de navegadores, eu acredito que hoje em dias esteja mais facil com a grande maioria dos navegadores baseados no chromium, mas a 10 anos atras era terrivem, cada alteração que você fazia precisava ser testada no IE6, IE7, Chrome, Firefox e etc, era muito dificil manter a compatibilidade.
+
+- Git/Version Control
+
+    Qualquer empresa de tecnologia que se preze trabalha com um controlador de versão e o mais popular deles é o GIT, então você precisa conhecer pelo menos os comandos basicos de git para poder trabalhar em uma empresa de tecnologia hoje em dia.
+
+- Testing/Debugging
+
+    Você precisa saber debuggar seu codigo e conhecer pelo menos como funcionam testes unitarios, testes funcionais e testes de integração e saber como escrever eles.
+
+- Problem Solving
+
+    E por ultimo e não menos importante, na verdade é o mais importante de todos que é Problem Solving, é a habilidade de resolver problemas, lembrem-se programação é só a ferramenta, nos na verdade somos resolvedores de problemas!
