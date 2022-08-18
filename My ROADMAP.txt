@@ -26,3 +26,8 @@ GUIDELINE:
 - Aprenda Linguagem de BackEnd (php, Python, Js[node.js], envolvendo Banco de Dados) 
 - Aprenda a trabalhar com APIs
 Dica : Abuse do Youtube e use a documentação das linguagens
+
+MEU PLANEJAMENTO PESSOAL:
+- Focar na stack JS
+- Aprender React Native
+- Aprender Kotlin
