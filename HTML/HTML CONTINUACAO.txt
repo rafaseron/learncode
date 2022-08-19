@@ -17,4 +17,4 @@ estilizar seu tamanho, padding, margin, etc
 // podemos fazer uma coluna ocupar 2 ou mais espaços com colspan e atribuindo valor
 // podemos fazer uma linha ocupar 2 ou mais espaços usando rowspan e atribuindo valor
 - FORMULARIOS HTML
-//parei em 580 udemy FORMULARIOS parte 3
+//varios tipos de formularios. consultar seus tipos conforme necessidade

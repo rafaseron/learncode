@@ -85,7 +85,99 @@
     </form>
 
 </div>
+<!-- date -->
+<div>
+    <form>
+        <label for="data"> Data: </label>
+        <input type="date" name="data" id="data" value="">
+    </form>
+</div>
+<!-- color -->
+<div>
+    <form>
+        <label for="cor"> Cor: </label>
+        <input type="color" name="cor" id="cor" value="">
+    </form>
+</div>
+<!-- file -->
+<div>
+    <form>
+        <label for="foto"> Foto: </label>
+        <input type="file" name="foto" id="foto" accept=".jpg, .png, image/*" multiple>
+    </form>
+<!-- password -->
+    <div>
+        <form>
+            <label for="senha"> Senha: </label>
+            <input type="password" name="senha" id="senha" placeholder="Sua senha">
+        </form>
+    </div>
+<!-- number -->
+    <div>
+        <form>
+            <label for="numero"> Digite um número </label>
+            <input type="number" name="numero" id="numero" step="5">
+        </form>
+    </div>
+<!-- range -->
+    <div>
+        <form>
+            <label for="range"> Qual o seu nivel de satisfação</label>
+            <input type="range" name="range" id="range" min="0" max="5" step="1">
+        </form>
+    </div>
+<!-- range usando datalist-->
+    <div>
+        <form>
+            <label for="range-datalist"> qual seu nivel</label>
+            <input type="range" name="range-datalist" id="range-datalist" list="tickmarks">
+            <datalist id="tickmarks">
+                <option value="0" label="0%">
+                <option value="10">
+                <option value="20">
+                <option value="30">
+                <option value="40">
+                <option value="50" label="50%">
+                <option value="60">
+                <option value="70">
+                <option value="80">
+                <option value="90">
+                <option value="100" label="100%">
+              </datalist>
+        </form>
+    </div>
+<!-- Search -->
+    <div>
+        <form>
+            <label for="busca"> Procure no nosso site </label>
+            <input type="search" name="buscar" id="busca" placeholder="Pesquise aqui">
+        </form>
+    </div>
+<!-- Select -->
+    <div>
+        <label for="select"> Selecione uma opção </label>
+        <Select id="select" name="select">
+        <optgroup label="Teste 1">    
+        <option value="usuario selecionou 1" label="1"></option>
+        <option value="usuario selecionou 2" label="2" selected></option> <!--faz com que venha pre selecionado-->
+        <option value="usuario selecionou 3" label="3" disabled></option> <!-- faz com que não de para selecionar essa opção-->
+        </optgroup>
 
+        <optgroup label="Teste 2"> <!-- funciona para agrupar algumas opções-->   
+            <option value="usuario selecionou 1" label="1"></option>
+            <option value="usuario selecionou 2" label="2" selected></option>
+            <option value="usuario selecionou 3" label="3" disabled></option>
+            </optgroup>
+        </Select>
+    </div>
 
+    <!-- TEXT AREA -->
+    <div>
+        <label for="textarea"> Observações da OS </label>
+    <textarea id="textarea" name="textarea" rows="8" cols="100"> 
+        se escrever valor isso ja vem escrito
+    </textarea>
+    </div>
+    <!-- o atributo rows seleciona quantidade de linhas para tamanho padrão. o cols quamtidades de coluna padrão-->
 </body>
 </html>
