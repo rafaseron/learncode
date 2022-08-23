@@ -18,3 +18,8 @@ estilizar seu tamanho, padding, margin, etc
 // podemos fazer uma linha ocupar 2 ou mais espaços usando rowspan e atribuindo valor
 - FORMULARIOS HTML
 //varios tipos de formularios. consultar seus tipos conforme necessidade
+- Separar HTML do CSS e do JS
+- Seletores Básicos CSS
+- Pseudo Classes
+- Pseudo Elementos
+- Especificidade CSS
